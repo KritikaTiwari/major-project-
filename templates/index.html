@@ -1,37 +1,15 @@
-
 <!DOCTYPE html>
-<html lang="en" >
+<html >
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-  <!--Required meta tags-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>    
-  <!-- Bootstrap CSS -->
-  <link href="/static/css/bootstrap.min.css" rel="stylesheet">    
-  <link href="/static/css/style.css" rel="stylesheet">    
-  <title>Deep Learning </title> 
-</head>
-<body style="background-color:white;">
-
-    <!-- navbar -->
-    <nav style="width: 100%;" class="navbar navbar-dark bg-secondary">
-         <a class="  navbar-brand" href="#" style="margin-left: 0px; margin-top: 0px; margin-right: 0px">
-             <img style="max-height: auto; width:100%;" src="\pic\PIET%20logo%20with%20tagline.jpg">
-         </a>
-        <div style="margin-top: 10px; margin-Right: 10px; color: white;">
-           <a class="  navbar-brand" href="#" style="margin-left: 0px; margin-top: 0px; margin-right: 0px">
-                     </a>
-            <a href="/ann" style="color: red" margin-right:="" 50px;="">HOME</a>
-        </div>
-        
-    </nav>
+<title>Machine Learning  </title>
+<meta charset="UTF-8">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
 <style><!DOCTYPE html>
-Kritika Tiwari10:45
+Deepak Moud10:45
 h1 {text-align: center;}
 h2 {text-align: center;}
 h3 {text-align: center;}
@@ -45,25 +23,26 @@ div {text-align: center;}
 <div class="clearfix">
            
 <div class="col-md-12">
+<center><p style="font-size:40px;color:black;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
 <center><p style="font-size:30px;color:black;margin-top:10px;">Department of Computer Engineering</p></center> 
 <center><p style="font-size:25px;color:black;margin-top:10px;">Summer Internship 2022 </p></center> 
 </div>
 <div class="login">
-<h2 > Analysis to predict accidents</h2>
+<h2 > Analysis to predict severity of accident</h2>
 <h4>Developed by Kritika Tiwari</h4>
 <!-- Main Input For Receiving Query to our ML -->
 <form action="{{ url_for('predict')}}"method="get">
 <div class="form-floating mb-3">
-<input type="number" class="form-control" id="exp1" name="exp1" step="any" min="0" max="20000" placeholder="0" required="required">
-<label for="floatingInput">Enter lattitude </label>
+<input type="number" class="form-control" id="exp1" name="exp1" step="any" min="0" max="200" placeholder="0" required="required">
+<label for="floatingInput">Enter Trajectory</label>
 <br><Br>
 </div>
-<div class="form-floating mb-3">  
-<input type="number" class="form-control" id="exp2" name="exp2" step="any" min="0" max="20000" placeholder="0" required="required">
-<label for="floatingInput">Enter longitude </label>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp2" name="exp2" step="any" min="0" max="200" placeholder="0" required="required">
+<label for="floatingInput">Enter secu</label>
 </div>
 <br>
-            <div class="col-md-4" style="color:black;">
+            <div class="col-md-4" style="color: #FFF;">
                 <label for="inputState" class="form-label">Choose a Model</label>
                 <select id="Model" name ="Model" step = "any" class="form-select" required>
 
@@ -82,7 +61,9 @@ div {text-align: center;}
                 </select>
             </div>
 <br>
-<button type="submit" class="btn btn-primary btn-block btn-large">Predict </button>
+<p>severity means 1: Unscathed 2: Killed 3: Serious injury 4: Light injury
+</p>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict Severity of Accident</button>
 </form>
 <br>
 <br>
