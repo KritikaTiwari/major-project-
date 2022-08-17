@@ -19,6 +19,14 @@ def home():
 def about():
   
     return render_template("about.html")
+ 
+@app.route('/memory')
+def memory():
+  
+    return render_template("memory.html")
+  
+  
+  
   
 @app.route('/predict',methods=['GET'])
 def predict():
