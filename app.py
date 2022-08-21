@@ -25,7 +25,10 @@ def memory():
   
     return render_template("memory.html")
   
+@app.route('/projects')
+def memory():
   
+    return render_template("projects.html")
   
   
 @app.route('/predict',methods=['GET'])
