@@ -26,7 +26,7 @@ def memory():
     return render_template("memory.html")
   
 @app.route('/projects')
-def memory():
+def projects():
   
     return render_template("projects.html")
   
